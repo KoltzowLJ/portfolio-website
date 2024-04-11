@@ -1,0 +1,1054 @@
+body, html {
+    margin: 0;
+    padding-top: 50px; 
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: rgba(51, 51, 51, 0.9); /* Dark background with some transparency */
+    color: #fff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* If you want to add a subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+main {
+    min-height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 150px; 
+    margin-bottom: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #5C6BC0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #3F51B5;
+}
+
+.form-group input, .form-group textarea {
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #5C6BC0;
+    box-shadow: 0 0 8px rgba(92, 107, 192, 0.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+    width: 100%; 
+    height: auto; 
+    max-height: 80vh; 
+    object-fit: contain; 
+}
+
+.modal-content p {
+    line-height: 1.6; /* Improved readability */
+    text-align: justify; /* Align text for better presentation */
+}
+
+.modal-content li {
+    line-height: 1.6; /* Improved readability */
+    text-align: justify; /* Align text for better presentation */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.portfolio-item {
+    display: inline-block;
+    margin: 10px; 
+    width: calc(33% - 20px); 
+    vertical-align: top; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    border-radius: 5px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+nav ul li a:hover {
+    background-color: #5C6BC0;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+.header.shrink {
+    padding: 0.5rem 0;
+    transition: padding 0.3s;
+}
+
+button {
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+button:hover, button:focus {
+    box-shadow: 0 0 15px rgba(92, 107, 192, 0.6);
+    transform: translateY(-2px);
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.3s;
+}
+
+
+
+.centered-content {
+    padding-top: 100px; 
+    text-align: center;
+}
+
+
+
+nav ul li a.active {
+    color: #5C6BC0; 
+    background-color: #f4f4f4; 
+    border-radius: 5px; 
+    padding: 5px 10px; 
+}
+
+
+.resume-container {
+    /* ... existing styles ... */
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+    max-width: 800px; 
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.resume-section h2 {
+    font-size: 2rem;
+    background-color: #eaeaea; 
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.experience-item, .education-item-1 {
+    margin-top: 1rem;
+
+}
+
+.date {
+    font-style: italic;
+    color: #555;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-category {
+    margin-right: 2rem;
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+}
+
+.resume-download {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #5C6BC0;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #3F51B5;
+}
+
+
+/* Hero Section Enhancements */
+.hero {
+    background: linear-gradient(120deg, #6dd5ed, #2193b0);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    transition: all 0.5s;
+}
+.hero h1 {
+    font-size: 3.5rem;
+    animation: fadeIn 2s ease-out;
+}
+.hero p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    animation: fadeIn 2s ease-out;
+}
+
+/* About Me Section Enhancements */
+#about-me {
+    padding: 60px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #6dd5ed, #2196f3); /* Attractive gradient background */
+    color: #fff; /* White text color for better contrast */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+    animation: slideUp 1s ease-in-out;
+}
+
+#about-me div {
+    max-width: 700px;
+    margin: auto;
+    animation: slideUp 1s ease-in-out;
+    position: relative; /* To ensure it's above the ::before element */
+    z-index: 2;
+}
+
+#about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for readability */
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9; /* Slightly transparent for a softer look */
+}
+
+#about-me a {
+    background-color: #fff; /* Contrasting button color */
+    color: #2196f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#about-me a:hover {
+    background-color: #2196f3;
+    color: #fff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Resume and Featured Projects Enhancements */
+.featured-one, .featured-two {
+    padding: 60px 0;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #6dd5ed, #2196f3); /* Attractive gradient background */
+    color: #fff; /* White text color for better contrast */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+    animation: slideUp 1s ease-in-out;
+}
+.featured-one h2, .featured-two h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for readability */
+}
+.featured-one p, .featured-two p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    opacity: 0.9; /* Slightly transparent for a softer look */
+}
+
+.featured-one a, .featured-two a {
+    background-color: #fff; /* Contrasting button color */
+    color: #2196f3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.featured-one a:hover, .featured-two a:hover {
+    background-color: #2196f3;
+    color: #fff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.featured-one div, .featured-two div {
+    max-width: 700px;
+    margin: auto;
+    animation: slideUp 1s ease-in-out;
+    position: relative; /* To ensure it's above the ::before element */
+    z-index: 2;
+}
+
+
+
+/* Call to Action Section Enhancements */
+.cta {
+    background: #333;
+    color: #fff;
+    padding: 60px 0;
+    margin-top: 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.cta p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.cta .btn-primary {
+    animation: pulse 2s infinite;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 20px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero p, .cta p { font-size: 1.1rem; }
+}
+
+.btn-primary {
+    background-color: #5C6BC0;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #3F51B5; 
+}
+
+.container {
+    width: 100%; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+.container > section {
+    margin-bottom: 40px; /* Space between sections */
+}
+
+.container > section:last-child {
+    margin-bottom: 0;
+}
+
+/* If you want to add more top and bottom space for each main section */
+main > section {
+    padding: 40px 0; 
+}
+
+
+.container .main-container section {
+    margin-bottom: 40px; /* Adjust the gap size as needed */
+}
+
+/* Last Section Margin Reset */
+.container .main-container section:last-child {
+    margin-bottom: 0; /* Removes the margin from the last section */
+}
+
+
+
+.social-links {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-link {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+a:hover, .btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease;
+}
+
+.form-container {
+    max-width: 600px; /* Adjust as needed */
+    margin: auto;
+    padding: 20px;
+    text-align: center; /* Centering form content */
+}
+
+.g-recaptcha {
+    margin: 20px auto; /* Adds space above and below reCAPTCHA */
+    display: inline-block; /* Center reCAPTCHA in the form */
+}
+
+.container-404 {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.container-404 h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container-404 p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.container-404 a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.container-404 a:hover {
+    background-color: #0056b3;
+}
+
+
+
+.resume-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 50px; /* Space for fixed header */
+}
+
+.resume-main {
+    flex: 1;
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 50px; /* Additional padding at the bottom */
+    overflow: auto;
+}
+
+.resume-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Resume-specific sections */
+.resume-section {
+    margin-bottom: 2rem;
+}
+
+
+
+
+.resume-section ul {
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Add padding to indent the list */
+    margin-left: 20px; /* Additional space on the left */
+    list-style-type: disc; /* Optional: style for the list bullet points */
+}
+
+.resume-section li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+.resume-section {
+    margin-bottom: 1.5rem; /* Reduces the margin between sections */
+}
+
+.resume-section h2 {
+    margin-bottom: 1rem; /* Reduces the space below each section heading */
+}
+
+.skill-category {
+    margin-right: 1rem; /* Adjust space between skill categories */
+    margin-bottom: 1rem;
+    flex-basis: 45%; /* Adjust this value for the width of each category */
+    text-align: left; /* Align text to the left */
+    padding-left: 20px; /* Indent for skill category lists */
+}
+
+.skill-category h3 {
+    margin-bottom: 0.5rem;
+    text-align: left; /* Align heading to the left */
+}
+
+.skill-category ul {
+    padding-left: 20px; /* Indent for list items */
+    margin-bottom: 0;
+}
+
+.skill-category li {
+    margin-bottom: 5px;
+    text-align: left; /* Align list items to the left */
+}
+
+
+@media (max-width: 768px) {
+    body, html {
+        padding-top: 40px; /* Adjust top padding for smaller screens */
+    }
+
+    /* .header {
+
+    }
+
+    nav ul li {
+
+    } */
+
+    .btn-primary, .btn-secondary {
+        /* Adjust button styles for smaller screens */
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 12px; /* Smaller padding */
+    }
+
+    .profile-pic {
+        /* Adjust profile picture size for smaller screens */
+        width: 100px;
+        height: 100px;
+    }
+
+    .portfolio-item {
+        /* Adjust portfolio item styles */
+        width: 100%; /* Full width on smaller screens */
+        margin: 0 0 20px 0; /* Adjust margin */
+    }
+
+    .form-group input, .form-group textarea {
+        /* Adjust form input and textarea */
+        padding: 8px; /* Smaller padding for text fields */
+    }
+
+    .contact-form button {
+        /* Adjust styles for contact form button */
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 15px; /* Smaller padding */
+    }
+
+    .centered-content {
+        /* Adjust styles for centered content */
+        padding-top: 30px; /* Less padding at the top */
+    }
+
+    .skill-category {
+        /* Adjust skill category styles */
+        flex-basis: 100%; /* Skill category takes full width */
+        margin-right: 0; /* Remove margin */
+        text-align: left; /* Align text to left */
+    }
+
+    .resume-main, .resume-container, .about-section {
+        /* Adjust resume, about section, and container styles */
+        width: 90%; /* Use more width for smaller screens */
+    }
+
+    .container {
+        /* Adjust container for smaller screens */
+        padding: 10px; /* Less padding around the container */
+    }
+    .resume-section ul, .skill-category ul {
+        padding-left: 15px; /* Adjust list padding for smaller screens */
+        margin-left: 15px;
+    }
+
+    .portfolio-item {
+        width: calc(50% - 20px); /* Adjust portfolio item width for medium screens */
+    }
+
+    .resume-section h2, .resume-section {
+        margin-bottom: 1rem; /* Adjust margins for resume sections */
+    }
+
+    .skill-category {
+        flex-basis: 100%;
+        margin-right: 0; /* Adjust margin between skill categories */
+        text-align: left;
+    }
+
+    .skill-category h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .skill-category li {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    header {
+        padding: 0.5rem 0; /* Reduce header padding */
+    }
+
+    .hero, #about-me, .featured-one, .featured-two, .cta {
+        padding: 40px 20px; /* Adjust section padding */
+    }
+
+    nav ul li a {
+        padding: 5px; /* Adjust navigation link padding */
+        font-size: 0.9rem; /* Adjust font size for navigation links */
+    }
+
+    .container {
+        width: 95%; /* Increase container width on smaller screens */
+    }
+
+    .centered-content {
+        padding-top: 50px; /* Adjust padding for centered content */
+    }
+
+    .form-group input, .form-group textarea {
+        padding: 8px; /* Adjust padding for form elements */
+    }
+
+    .contact-form button {
+        padding: 8px 15px; /* Adjust button padding */
+        font-size: 14px; /* Adjust button font size */
+    }
+
+        footer {
+        padding: 20px 0; /* Adjust padding for a compact look */
+        text-align: center; /* Ensure content is centered */
+    }
+
+    .social-links {
+        margin-bottom: 10px; /* Space between social links and copyright text */
+    }
+
+    .social-link {
+        display: inline-block; /* Display social links inline */
+        margin: 0 5px; /* Reduce margin for compact spacing */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .social-link i {
+        margin-right: 5px; /* Space between icon and text */
+    }
+
+    footer p {
+        font-size: 14px; /* Reduce font size for the copyright text */
+        margin-top: 10px; /* Space above the copyright text */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: calc(100% - 20px); /* Adjust portfolio item width for smaller screens */
+    }
+
+    .profile-pic {
+        width: 100px; /* Adjust profile picture size */
+        height: 100px;
+    }
+}
+
+.about-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-content {
+    flex: 2;
+    margin-left: 20px;
+}
+
+.about-content p {
+    line-height: 1.6; /* Improved readability */
+    text-align: justify; /* Align text for better presentation */
+}
+
+.about-content h3 {
+    color: #333; /* Adjust color to fit your theme */
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.container-error {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.container-error h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container-error p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.container-error a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.container-error a:hover {
+    background-color: #0056b3;
+}
+
+.container-thanks {
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.container-thanks h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.container-thanks p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.container-thanks a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.container-thanks a:hover {
+    background-color: #0056b3;
+}
+
+#cookieConsentContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(52, 58, 64, 0.9); /* dark background with some opacity */
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    z-index: 10000; /* make sure it's on top */
+    display: none; /* hidden by default, shown by script */
+}
+
+#cookieConsentContainer p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#acceptCookieConsent {
+    background-color: #28a745; /* green background */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+#acceptCookieConsent:hover {
+    background-color: #218838; /* slightly darker green on hover */
+}
+
+@media (max-width: 768px) {
+    #cookieConsentContainer {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #acceptCookieConsent {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.privacy-policy-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.privacy-policy-content {
+    flex: 2; /* Adjusts the width of the content area */
+    margin-left: 20px;
+}
+
+.privacy-policy-content p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.privacy-policy-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .privacy-policy-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .privacy-policy-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.terms-of-service-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.terms-of-service-content {
+    flex: 2; /* Adjusts the width of the content area */
+    margin-left: 20px;
+}
+
+.terms-of-service-content p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.terms-of-service-content h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .terms-of-service-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .terms-of-service-content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.legal-links {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.legal-links a {
+    color: #fff; /* Adjust color as needed */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.legal-links a:hover {
+    text-decoration: underline;
+}
